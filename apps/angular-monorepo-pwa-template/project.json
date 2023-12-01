@@ -1,0 +1,91 @@
+{
+  "name": "angular-monorepo-pwa-template",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "angular-monorepo-pwa-template",
+  "sourceRoot": "apps/angular-monorepo-pwa-template/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:application",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/angular-monorepo-pwa-template",
+        "index": "apps/angular-monorepo-pwa-template/src/index.html",
+        "browser": "apps/angular-monorepo-pwa-template/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "apps/angular-monorepo-pwa-template/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/angular-monorepo-pwa-template/src/favicon.ico",
+          "apps/angular-monorepo-pwa-template/src/assets"
+        ],
+        "styles": ["apps/angular-monorepo-pwa-template/src/styles.scss"],
+        "scripts": [],
+        "server": "apps/angular-monorepo-pwa-template/src/main.server.ts",
+        "prerender": true,
+        "ssr": {
+          "entry": "apps/angular-monorepo-pwa-template/server.ts"
+        }
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "optimization": false,
+          "extractLicenses": false,
+          "sourceMap": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "angular-monorepo-pwa-template:build:production"
+        },
+        "development": {
+          "buildTarget": "angular-monorepo-pwa-template:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "buildTarget": "angular-monorepo-pwa-template:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "apps/angular-monorepo-pwa-template/**/*.ts",
+          "apps/angular-monorepo-pwa-template/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/angular-monorepo-pwa-template/jest.config.ts"
+      }
+    }
+  }
+}
