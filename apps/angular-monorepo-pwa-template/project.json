@@ -8,19 +8,26 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:application",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/angular-monorepo-pwa-template",
         "index": "apps/angular-monorepo-pwa-template/src/index.html",
         "browser": "apps/angular-monorepo-pwa-template/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [
+          "zone.js"
+        ],
         "tsConfig": "apps/angular-monorepo-pwa-template/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
           "apps/angular-monorepo-pwa-template/src/favicon.ico",
-          "apps/angular-monorepo-pwa-template/src/assets"
+          "apps/angular-monorepo-pwa-template/src/assets",
+          "apps/angular-monorepo-pwa-template/src/manifest.webmanifest"
         ],
-        "styles": ["apps/angular-monorepo-pwa-template/src/styles.scss"],
+        "styles": [
+          "apps/angular-monorepo-pwa-template/src/styles.scss"
+        ],
         "scripts": [],
         "server": "apps/angular-monorepo-pwa-template/src/main.server.ts",
         "prerender": true,
@@ -42,7 +49,8 @@
               "maximumError": "4kb"
             }
           ],
-          "outputHashing": "all"
+          "outputHashing": "all",
+          "serviceWorker": "apps/angular-monorepo-pwa-template/ngsw-config.json"
         },
         "development": {
           "optimization": false,
@@ -72,7 +80,9 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
         "lintFilePatterns": [
           "apps/angular-monorepo-pwa-template/**/*.ts",
@@ -82,7 +92,9 @@
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
         "jestConfig": "apps/angular-monorepo-pwa-template/jest.config.ts"
       }
