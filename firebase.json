@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist",
+    "public": "dist/apps/angular-monorepo-pwa-template/browser",
     "ignore": [
       "firebase.json",
       "**/.*",
