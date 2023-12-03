@@ -15,9 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@my-pwa/shared-ui": [
-        "libs/shared-ui/src/index.ts"
-      ]
+      "@my-pwa/about-ui": ["libs/about-ui/src/index.ts"],
+      "@my-pwa/home-ui": ["libs/home-ui/src/index.ts"],
+      "@my-pwa/shared-ui": ["libs/shared-ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

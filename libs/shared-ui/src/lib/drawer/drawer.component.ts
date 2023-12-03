@@ -1,11 +1,13 @@
-import { Component, Input, ViewChild } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { MatDrawer, MatSidenavModule } from '@angular/material/sidenav';
+import { SidenavComponent } from '../sidenav/sidenav.component';
 
 @Component({
   selector: 'my-pwa-template-drawer',
   standalone: true,
   imports: [
-    MatSidenavModule
+    MatSidenavModule,
+    SidenavComponent
   ],
   templateUrl: './drawer.component.html',
   styleUrl: './drawer.component.css'
