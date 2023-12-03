@@ -1,0 +1,8 @@
+mat-nav-list a {
+  display: flex;
+  align-items: center;
+}
+
+mat-icon {
+  margin-right: 8px;
+}

@@ -1,6 +1,6 @@
 <mat-drawer-container class="example-container" hasBackdrop>
   <mat-drawer #drawer mode="side">
-    <my-pwa-template-sidenav></my-pwa-template-sidenav>
+    <my-pwa-template-sidenav (toggleDrawer)="toggleDrawer()"></my-pwa-template-sidenav>
   </mat-drawer>
   <mat-drawer-content>
     <ng-content></ng-content>
