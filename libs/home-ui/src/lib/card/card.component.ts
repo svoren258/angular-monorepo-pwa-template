@@ -11,5 +11,4 @@ import { MatCardModule } from '@angular/material/card';
   styleUrl: './card.component.css'
 })
 export class CardComponent {
-
 }

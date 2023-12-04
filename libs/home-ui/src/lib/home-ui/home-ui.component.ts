@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit, signal, Signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { Card, FirestoreService } from '@my-pwa/home-data-access';
 import { CardComponent } from '../card/card.component';
 
 @Component({
@@ -11,4 +12,10 @@ import { CardComponent } from '../card/card.component';
   templateUrl: './home-ui.component.html',
   styleUrl: './home-ui.component.css',
 })
-export class HomeUiComponent {}
+export class HomeUiComponent implements OnInit {
+  cards: Signal<Card[] | undefined> = signal([]);
+  private readonly firestoreService = inject(FirestoreService);
+  ngOnInit(): void {
+    this.cards = this.firestoreService.cards;
+  }
+}

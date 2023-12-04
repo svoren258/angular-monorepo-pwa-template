@@ -1,5 +1,17 @@
-<mat-grid-list cols="2" rowHeight="2:1">
-  <mat-grid-tile>
-    <my-pwa-template-card>Simple card</my-pwa-template-card>
-  </mat-grid-tile>
+<mat-grid-list
+  cols="2"
+  rowHeight="2:1"
+>
+  @if (cards() != null) {
+    @for (card of cards();track card.title) {
+      <mat-grid-tile>
+        <my-pwa-template-card>
+          <div class="card-content">
+            <h3>{{ card.title }}</h3>
+            {{ card.label }}
+          </div>
+        </my-pwa-template-card>
+      </mat-grid-tile>
+    }
+  }
 </mat-grid-list>
