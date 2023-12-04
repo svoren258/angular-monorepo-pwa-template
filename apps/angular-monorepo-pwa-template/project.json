@@ -98,6 +98,13 @@
       "options": {
         "jestConfig": "apps/angular-monorepo-pwa-template/jest.config.ts"
       }
+    },
+    "deploy": {
+      "executor": "@angular/fire:deploy",
+      "options": {
+        "version": 2,
+        "browserTarget": "angular-monorepo-pwa-template:build:production"
+      }
     }
   }
 }

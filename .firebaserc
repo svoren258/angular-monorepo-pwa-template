@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "my-pwa-template-5d4be"
+  },
+  "targets": {
+    "my-pwa-template-5d4be": {
+      "hosting": {
+        "angular-monorepo-pwa-template": [
+          "my-pwa-template-5d4be"
+        ]
+      }
+    }
   }
 }

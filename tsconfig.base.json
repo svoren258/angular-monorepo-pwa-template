@@ -10,15 +10,30 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2020", "dom"],
+    "lib": [
+      "es2020",
+      "dom"
+    ],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@my-pwa/about-ui": ["libs/about-ui/src/index.ts"],
-      "@my-pwa/home-ui": ["libs/home-ui/src/index.ts"],
-      "@my-pwa/shared-ui": ["libs/shared-ui/src/index.ts"]
+      "@my-pwa/home-data-access": [
+        "libs/home-data-access/src/index.ts"
+      ],
+      "@my-pwa/about-ui": [
+        "libs/about-ui/src/index.ts"
+      ],
+      "@my-pwa/home-ui": [
+        "libs/home-ui/src/index.ts"
+      ],
+      "@my-pwa/shared-ui": [
+        "libs/shared-ui/src/index.ts"
+      ]
     }
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
 }
