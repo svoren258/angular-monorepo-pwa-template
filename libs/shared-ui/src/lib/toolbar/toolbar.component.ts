@@ -1,8 +1,9 @@
 import { NgIf } from '@angular/common';
-import { Component, ViewChild } from '@angular/core';
+import { Component, inject, ViewChild } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { AuthService } from '@my-pwa/auth-data-access';
 import { DrawerComponent } from '../drawer/drawer.component';
 
 @Component({
@@ -20,7 +21,12 @@ import { DrawerComponent } from '../drawer/drawer.component';
 })
 export class ToolbarComponent {
   @ViewChild('drawerComponent') drawerComponent: DrawerComponent | undefined;
+  private readonly authService = inject(AuthService);
   toggleSidenav(): void {
     this.drawerComponent?.toggleDrawer();
+  }
+
+  logout(): void {
+    this.authService.logout();
   }
 }

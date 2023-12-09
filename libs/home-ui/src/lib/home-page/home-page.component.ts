@@ -10,10 +10,10 @@ import { CardComponent } from '../card/card.component';
   selector: 'my-pwa-template-home-ui',
   standalone: true,
   imports: [CommonModule, MatGridListModule, MatCardModule, CardComponent, MatButtonModule],
-  templateUrl: './home-ui.component.html',
-  styleUrl: './home-ui.component.css',
+  templateUrl: './home-page.component.html',
+  styleUrl: './home-page.component.css',
 })
-export class HomeUiComponent {
+export class HomePageComponent {
   private readonly firestoreService = inject(CardFirestoreService);
   cards = this.firestoreService.cards;
 }

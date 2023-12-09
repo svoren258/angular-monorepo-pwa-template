@@ -15,7 +15,11 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@angular-monorepo-pwa-template/home-feature": [
+      "@my-pwa/auth-data-access": [
+        "libs/auth-data-access/src/index.ts"
+      ],
+      "@my-pwa/auth-ui": ["libs/auth-ui/src/index.ts"],
+      "@my-pwa/home-feature": [
         "libs/home-feature/src/index.ts"
       ],
       "@my-pwa/about-ui": ["libs/about-ui/src/index.ts"],
