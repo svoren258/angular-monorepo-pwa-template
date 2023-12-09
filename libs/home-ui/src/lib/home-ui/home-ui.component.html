@@ -5,10 +5,13 @@
   @for (card of cards();track card.title) {
     <mat-grid-tile>
       <my-pwa-template-card>
-        <div class="card-content">
-          <h3>{{ card.title }}</h3>
-          {{ card.label }}
-        </div>
+        <mat-card-header>
+          <mat-card-title>{{ card.title }}</mat-card-title>
+          <mat-card-subtitle>{{ card.label }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-actions>
+          <button mat-button>SHOW DETAILS</button>
+        </mat-card-actions>
       </my-pwa-template-card>
     </mat-grid-tile>
   }
