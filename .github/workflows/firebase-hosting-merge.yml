@@ -11,10 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: npm ci && npx nx build angular-monorepo-pwa-template
+      - run: npm ci && npx nx build angular-monorepo-pwa-template --verbose
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_MY_PWA_TEMPLATE_5D4BE }}'
           channelId: live
           projectId: my-pwa-template-5d4be
+        env:
+          FIREBASE_CLI_EXPERIMENTS: webframeworks
