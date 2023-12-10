@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
-import { CardFirestoreService } from '@my-pwa/home-data-access';
+import { CardFirestoreService } from '@my-pwa/platform-data-access';
 import { CardComponent } from '../card/card.component';
 
 @Component({

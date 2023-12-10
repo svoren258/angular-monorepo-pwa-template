@@ -1,8 +1,10 @@
 import { Component, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 import { AuthService } from '@my-pwa/auth-data-access';
+import { CardComponent } from '@my-pwa/platform-ui';
 
 const GOOGLE_ICON = `
     <svg
@@ -37,7 +39,10 @@ const GOOGLE_ICON = `
   standalone: true,
   imports: [
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    CardComponent,
+    CardComponent,
+    MatCardModule
   ],
   templateUrl: './login-page.component.html',
   styleUrl: './login-page.component.css'

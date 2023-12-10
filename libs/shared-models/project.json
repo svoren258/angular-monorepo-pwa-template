@@ -1,7 +1,7 @@
 {
-  "name": "home-data-access",
+  "name": "shared-models",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/home-data-access/src",
+  "sourceRoot": "libs/shared-models/src",
   "prefix": "angular-monorepo-pwa-template",
   "tags": [],
   "projectType": "library",
@@ -10,7 +10,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "libs/home-data-access/jest.config.ts"
+        "jestConfig": "libs/shared-models/jest.config.ts"
       }
     },
     "lint": {
@@ -18,8 +18,8 @@
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
-          "libs/home-data-access/**/*.ts",
-          "libs/home-data-access/**/*.html"
+          "libs/shared-models/**/*.ts",
+          "libs/shared-models/**/*.html"
         ]
       }
     }

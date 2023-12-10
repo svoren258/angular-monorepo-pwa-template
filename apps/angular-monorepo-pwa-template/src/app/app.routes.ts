@@ -1,27 +1,24 @@
-import { canActivate, redirectLoggedInTo, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
+import { RoutesEnum } from '@angular-monorepo-pwa-template/shared-models';
+import { canActivate, redirectLoggedInTo } from '@angular/fire/auth-guard';
 import { Route } from '@angular/router';
+import { PLATFORM_ROUTES } from '@my-pwa/platform-data-access';
 
-const redirectLoggedInToHomePage = () => redirectLoggedInTo(['home']);
-const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
+const redirectLoggedInToPlatform = () => redirectLoggedInTo(['platform']);
 
 export const appRoutes: Route[] = [
   {
-    path: 'login',
+    path: RoutesEnum.LOGIN,
     loadComponent: () => import('@my-pwa/auth-ui').then(m => m.LoginPageComponent),
-    ...canActivate(redirectLoggedInToHomePage),
+    ...canActivate(redirectLoggedInToPlatform),
   },
   {
-    path: 'home',
-    loadComponent: () => import('@my-pwa/home-ui').then(m => m.HomePageComponent),
-    ...canActivate(redirectUnauthorizedToLogin)
-  },
-  {
-    path: 'about',
-    loadComponent: () => import('@my-pwa/about-ui').then(m => m.AboutUiComponent)
+    path: RoutesEnum.PLATFORM,
+    loadComponent: () => import('@my-pwa/platform-ui').then(m => m.PlatformComponent),
+    children: PLATFORM_ROUTES
   },
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: RoutesEnum.LOGIN,
     pathMatch: 'full'
   },
 ];
