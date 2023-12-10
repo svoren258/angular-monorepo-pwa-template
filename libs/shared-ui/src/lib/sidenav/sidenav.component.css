@@ -3,7 +3,7 @@
   width: 65vw;
 
   @media (min-width: 760px) {
-    width: 100%;r
+    width: 100%;
     min-width: 250px;
   }
 }
