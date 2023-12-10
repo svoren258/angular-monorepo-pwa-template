@@ -1,14 +1,22 @@
-<mat-nav-list>
-  <a mat-list-item routerLink="/home" (click)="toggleDrawer.emit()">
-    <mat-icon>home</mat-icon>
-    Home
-  </a>
-  <a mat-list-item routerLink="/about" (click)="toggleDrawer.emit()">
-    <mat-icon>info</mat-icon>
-    About
-  </a>
-  <a mat-list-item routerLink="/contact" (click)="toggleDrawer.emit()">
-    <mat-icon>contact_mail</mat-icon>
-    Contact
-  </a>
+<mat-nav-list class="nav-list">
+  <mat-list-item routerLink="/home" (click)="toggleDrawer.emit()">
+    <button mat-icon-button matListItemMeta>
+      <mat-icon>home</mat-icon>
+    </button>
+    <a matListItemTitle>Home</a>
+  </mat-list-item>
+
+  <mat-list-item routerLink="/about" (click)="toggleDrawer.emit()">
+    <button mat-icon-button matListItemMeta>
+      <mat-icon>info</mat-icon>
+    </button>
+    <a matListItemTitle>About</a>
+  </mat-list-item>
+
+  <mat-list-item routerLink="/contact" (click)="toggleDrawer.emit()">
+    <button mat-icon-button matListItemMeta>
+      <mat-icon>contact_mail</mat-icon>
+    </button>
+    <a matListItemTitle>Contact</a>
+  </mat-list-item>
 </mat-nav-list>
