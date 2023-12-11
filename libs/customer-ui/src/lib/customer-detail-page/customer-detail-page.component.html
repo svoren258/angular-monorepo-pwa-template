@@ -1,0 +1,21 @@
+<mat-card class="form-card">
+  <form class="form-wrapper"[formGroup]="customerForm">
+    <mat-form-field>
+      <mat-label>Input</mat-label>
+      <input [formControlName]="'name'" matInput>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Select</mat-label>
+      <mat-select [formControlName]="'gender'">
+        <mat-option value="male">male</mat-option>
+        <mat-option value="female">female</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Textarea</mat-label>
+      <textarea [formControlName]="'description'" matInput></textarea>
+    </mat-form-field>
+    <button mat-button (click)="submitCustomerForm()">SUBMIT</button>
+  </form>
+</mat-card>
+

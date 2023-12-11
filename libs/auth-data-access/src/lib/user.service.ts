@@ -1,6 +1,5 @@
 import { inject, Injectable, signal } from '@angular/core';
 import { Auth, user, User } from '@angular/fire/auth';
-import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { take } from 'rxjs';
 
 @Injectable({

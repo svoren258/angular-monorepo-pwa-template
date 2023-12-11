@@ -1,1 +1,1 @@
-export * from './lib/customer-ui/customer-ui.component';
+export * from './lib/customer-detail-page/customer-detail-page.component';
