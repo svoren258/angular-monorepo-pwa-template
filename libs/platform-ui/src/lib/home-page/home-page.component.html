@@ -1,22 +1,26 @@
-<mat-grid-list
-  cols="2"
-  rowHeight="1:1"
->
-  @for (card of cards();track card.title) {
-    <mat-grid-tile>
-      <my-pwa-template-card>
-        <mat-card-header>
-          <mat-card-title>{{ card.title }}</mat-card-title>
-          <mat-card-subtitle>{{ card.label }}</mat-card-subtitle>
-        </mat-card-header>
-        <mat-card-actions>
-          <button mat-button>SHOW DETAILS</button>
-        </mat-card-actions>
-      </my-pwa-template-card>
-    </mat-grid-tile>
-  }
-</mat-grid-list>
+<div class="grid-wrapper">
+  <mat-grid-list
+    cols="2"
+    rowHeight="1:1"
+  >
+    @for (card of cards();track card.title) {
+      <mat-grid-tile>
+        <my-pwa-template-card>
+          <mat-card-header>
+            <mat-card-title>{{ card.title }}</mat-card-title>
+            <mat-card-subtitle>{{ card.label }}</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-actions>
+            <button mat-button>SHOW DETAILS</button>
+          </mat-card-actions>
+        </my-pwa-template-card>
+      </mat-grid-tile>
+    }
+  </mat-grid-list>
+</div>
 
-<my-pwa-template-button [type]="ButtonType.FAB">
-  <mat-icon>add</mat-icon>
-</my-pwa-template-button>
+<div class="floating-button">
+  <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+    <mat-icon>add</mat-icon>
+  </button>
+</div>
