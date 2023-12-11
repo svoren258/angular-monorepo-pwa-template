@@ -1,6 +1,6 @@
-import { RoutesEnum } from '@angular-monorepo-pwa-template/shared-models';
 import { canActivate, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 import { Routes } from '@angular/router';
+import { RoutesEnum } from '../../../shared-models/src/lib/routes.model';
 
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
 

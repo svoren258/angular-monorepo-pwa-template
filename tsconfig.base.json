@@ -15,13 +15,24 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@angular-monorepo-pwa-template/customer-data-access": [
+        "libs/customer-data-access/src/index.ts"
+      ],
+      "@angular-monorepo-pwa-template/customer-ui": [
+        "libs/customer-ui/src/index.ts"
+      ],
+      "@angular-monorepo-pwa-template/platform-feature": [
+        "libs/platform-feature/src/index.ts"
+      ],
       "@angular-monorepo-pwa-template/shared-models": [
         "libs/shared-models/src/index.ts"
       ],
       "@my-pwa/about-ui": ["libs/about-ui/src/index.ts"],
       "@my-pwa/auth-data-access": ["libs/auth-data-access/src/index.ts"],
       "@my-pwa/auth-ui": ["libs/auth-ui/src/index.ts"],
-      "@my-pwa/platform-data-access": ["libs/platform-data-access/src/index.ts"],
+      "@my-pwa/platform-data-access": [
+        "libs/platform-data-access/src/index.ts"
+      ],
       "@my-pwa/platform-ui": ["libs/platform-ui/src/index.ts"],
       "@my-pwa/shared-ui": ["libs/shared-ui/src/index.ts"]
     }

@@ -1,7 +1,7 @@
+import { PLATFORM_ROUTES } from '@angular-monorepo-pwa-template/platform-feature';
 import { RoutesEnum } from '@angular-monorepo-pwa-template/shared-models';
 import { canActivate, redirectLoggedInTo } from '@angular/fire/auth-guard';
 import { Route } from '@angular/router';
-import { PLATFORM_ROUTES } from '@my-pwa/platform-data-access';
 
 const redirectLoggedInToPlatform = () => redirectLoggedInTo(['platform']);
 

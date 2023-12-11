@@ -1,7 +1,7 @@
+import { Card } from '@angular-monorepo-pwa-template/shared-models';
 import { inject, Injectable, signal } from '@angular/core';
 import { CollectionReference } from '@angular/fire/compat/firestore';
 import { collection, Firestore, getDocs } from '@angular/fire/firestore';
-import { Card } from './models/card.model';
 
 @Injectable({
   providedIn: 'root'

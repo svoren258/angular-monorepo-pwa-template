@@ -1,16 +1,10 @@
-import { RoutesEnum } from '@angular-monorepo-pwa-template/shared-models';
-import { Component, computed, EventEmitter, inject, OnDestroy, Output, signal } from '@angular/core';
+import { Link, RoutesEnum } from '@angular-monorepo-pwa-template/shared-models';
+import { Component, EventEmitter, inject, OnDestroy, Output, signal } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { NavigationEnd, Router, RouterLink, RouterOutlet } from '@angular/router';
 import { filter, Subscription } from 'rxjs';
-
-type Link = {
-  route: RoutesEnum;
-  icon: string;
-  label: string;
-}
 
 @Component({
   selector: 'my-pwa-template-sidenav',
