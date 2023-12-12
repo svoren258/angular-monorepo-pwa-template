@@ -1,0 +1,11 @@
+<mat-list class="customers-list" role="list">
+  @for (customer of customers(); track customer) {
+    <div class="list-item-wrapper">
+      <mat-list-item role="listitem">{{customer.name}}</mat-list-item>
+      <button mat-icon-button (click)="editCustomer(customer.id)">
+        <mat-icon>edit</mat-icon>
+      </button>
+    </div>
+    <mat-divider></mat-divider>
+  }
+</mat-list>

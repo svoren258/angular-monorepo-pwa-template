@@ -1,0 +1,13 @@
+:host {
+  width: 100%;
+}
+
+.customers-list {
+  width: 100%;
+}
+
+.list-item-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

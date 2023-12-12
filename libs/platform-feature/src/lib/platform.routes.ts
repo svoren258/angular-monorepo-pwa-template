@@ -19,6 +19,10 @@ export const PLATFORM_ROUTES: Routes = [
     loadComponent: () => import('@angular-monorepo-pwa-template/customer-ui').then(m => m.CustomerDetailPageComponent)
   },
   {
+    path: RoutesEnum.CUSTOMERS,
+    loadComponent: () => import('@angular-monorepo-pwa-template/customer-ui').then(m => m.CustomersPageComponent)
+  },
+  {
     path: '',
     redirectTo: RoutesEnum.HOME,
     pathMatch: 'full'

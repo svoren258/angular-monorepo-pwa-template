@@ -3,5 +3,6 @@ export const enum RoutesEnum {
   HOME = 'home',
   LOGIN = 'login',
   ABOUT = 'about',
-  CUSTOMER_DETAIL = 'customer_detail'
+  CUSTOMER_DETAIL = 'customer_detail',
+  CUSTOMERS = 'customers'
 }

@@ -32,6 +32,11 @@ export class SidenavComponent implements OnDestroy {
       label: 'About',
       icon: 'info',
     },
+    {
+      route: RoutesEnum.CUSTOMERS,
+      label: 'Customers',
+      icon: 'person'
+    }
   ];
   private readonly router = inject(Router);
   activeLink = signal<RoutesEnum | undefined>(RoutesEnum.HOME);
