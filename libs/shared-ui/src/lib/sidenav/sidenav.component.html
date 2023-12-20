@@ -1,6 +1,6 @@
 <mat-nav-list class="nav-list">
   @for (link of links; track link) {
-    <mat-list-item [activated]="activeLink() === link.route" [routerLink]="link.route" (click)="toggleDrawer.emit()">
+    <mat-list-item #matListItem (focus)="removeFocus(matListItem)" [activated]="activeLink() === link.route" [routerLink]="link.route" (click)="toggleDrawer.emit()">
       <button mat-icon-button matListItemMeta>
         <mat-icon>{{link.icon}}</mat-icon>
       </button>

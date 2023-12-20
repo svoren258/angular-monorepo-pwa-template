@@ -2,7 +2,7 @@ import { Link, RoutesEnum } from '@angular-monorepo-pwa-template/shared-models';
 import { Component, EventEmitter, inject, OnDestroy, Output, signal } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { MatListModule } from '@angular/material/list';
+import { MatListItem, MatListModule } from '@angular/material/list';
 import { NavigationEnd, Router, RouterLink, RouterOutlet } from '@angular/router';
 import { filter, Subscription } from 'rxjs';
 
@@ -48,6 +48,11 @@ export class SidenavComponent implements OnDestroy {
     ).subscribe(event => {
       this.activeLink.set(this.links.map(link => link.route).find(route => event.url.includes(route)));
     });
+  }
+
+  // FIXME: workaround for material bug that focuses first list item by default
+  removeFocus(listItem: MatListItem): void {
+    listItem._elementRef.nativeElement.blur()
   }
 
   ngOnDestroy(): void {
