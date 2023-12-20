@@ -41,6 +41,7 @@ export class CustomerDetailPageComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.selectedCustomer) {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const { id, ...customer } = this.selectedCustomer;
       this.customerForm.setValue(customer);
     }

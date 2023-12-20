@@ -26,4 +26,8 @@ export class CustomersPageComponent {
     this.customerService.selectCustomer(customerId);
     this.router.navigateByUrl(`${RoutesEnum.PLATFORM}/${RoutesEnum.CUSTOMER_DETAIL}`);
   }
+
+  deleteCustomer(customerId?: string): void {
+    this.customerService.deleteCustomer(customerId);
+  }
 }

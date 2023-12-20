@@ -1,8 +1,7 @@
 import { Customer } from '@angular-monorepo-pwa-template/shared-models';
 import { inject, Injectable, signal } from '@angular/core';
-import { getRef } from '@angular/fire/compat/database/utils';
 import { CollectionReference } from '@angular/fire/compat/firestore';
-import { addDoc, collection, doc, Firestore, getDocs, setDoc, updateDoc } from '@angular/fire/firestore';
+import { addDoc, collection, deleteDoc, doc, Firestore, getDocs, updateDoc } from '@angular/fire/firestore';
 
 @Injectable({
   providedIn: 'root'
@@ -34,6 +33,14 @@ export class CustomerService {
       return;
     }
     await addDoc(this.customersCollection, customer);
+    await this.getCustomers();
+  }
+
+  async deleteCustomer(id?: string): Promise<void> {
+    if (!id) {
+      return;
+    }
+    await deleteDoc(doc(this.customersCollection, id));
     await this.getCustomers();
   }
 }
