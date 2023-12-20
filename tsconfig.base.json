@@ -24,6 +24,9 @@
       "@angular-monorepo-pwa-template/platform-feature": [
         "libs/platform-feature/src/index.ts"
       ],
+      "@angular-monorepo-pwa-template/shared-data-access": [
+        "libs/shared-data-access/src/index.ts"
+      ],
       "@angular-monorepo-pwa-template/shared-models": [
         "libs/shared-models/src/index.ts"
       ],
