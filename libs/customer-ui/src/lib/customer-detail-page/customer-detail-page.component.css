@@ -25,3 +25,13 @@
 mat-form-field {
   width: 100%;
 }
+
+.action-buttons-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.back-button {
+  margin-right: 10px;
+}

@@ -1,6 +1,8 @@
+export const GENDER = ['male', 'female'] as const;
+
 export type Customer = {
   id?: string;
   name: string;
-  gender: 'male' | 'female';
+  gender: typeof GENDER[number];
   description: string;
 }

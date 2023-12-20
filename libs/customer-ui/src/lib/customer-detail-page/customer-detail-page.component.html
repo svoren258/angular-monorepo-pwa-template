@@ -1,21 +1,45 @@
 <mat-card class="form-card">
-  <form class="form-wrapper"[formGroup]="customerForm">
+  <form
+    class="form-wrapper"
+    [formGroup]="customerForm"
+  >
     <mat-form-field>
       <mat-label>Customer name</mat-label>
-      <input [formControlName]="'name'" matInput>
+      <input
+        [formControlName]="'name'"
+        matInput
+      >
     </mat-form-field>
     <mat-form-field>
       <mat-label>Select gender</mat-label>
       <mat-select [formControlName]="'gender'">
-        <mat-option value="male">male</mat-option>
-        <mat-option value="female">female</mat-option>
+        @for (gender of GENDER;track gender) {
+          <mat-option [value]="gender">{{ gender }}</mat-option>
+        }
       </mat-select>
     </mat-form-field>
     <mat-form-field>
       <mat-label>Description</mat-label>
-      <textarea [formControlName]="'description'" matInput></textarea>
+      <textarea
+        [formControlName]="'description'"
+        matInput
+      ></textarea>
     </mat-form-field>
-    <button mat-raised-button color="primary" (click)="submitCustomerForm()">SUBMIT</button>
+    <div class="action-buttons-wrapper">
+      <button
+        class="back-button"
+        mat-button
+        color="primary"
+        (click)="goBackHome()"
+      >BACK
+      </button>
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="submitCustomerForm()"
+      >SUBMIT
+      </button>
+    </div>
   </form>
 </mat-card>
 

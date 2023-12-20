@@ -25,9 +25,9 @@ export class CustomerService {
     this.customers.set(customers.docs.map(customer => ({...customer.data(), id: customer.id})));
   }
 
-  async updateCustomer(customer: Customer): Promise<void> {
-    if (customer.id) {
-      await updateDoc(doc(this.customersCollection, customer.id), customer);
+  async updateCustomer({id, ...customer}: Customer): Promise<void> {
+    if (id) {
+      await updateDoc(doc(this.customersCollection, id), customer);
       await this.getCustomers();
       this.selectedCustomer.set(undefined);
       return;
