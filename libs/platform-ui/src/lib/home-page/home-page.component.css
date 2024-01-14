@@ -1,17 +1,19 @@
 :host {
-  height: 100%;
   width: 100%;
 }
 
 .grid-wrapper {
-  position: absolute;
+  position: relative;
   width: 100%;
   height: calc(100% - 60px);
 }
 
 .floating-button {
-  position: relative;
-  width: fit-content;
+  position: absolute;
   top: 85%;
-  left: 90%;
+  right: 5%;
+
+  @media (width <= 769px) {
+    right: 10%;
+  }
 }
