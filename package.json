@@ -2,7 +2,9 @@
   "name": "@angular-monorepo-pwa-template/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build": "nx build angular-monorepo-pwa-template"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~17.0.0",
