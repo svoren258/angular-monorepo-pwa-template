@@ -15,11 +15,11 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@angular-monorepo-pwa-template/checklist-ui": [
+        "libs/checklist-ui/src/index.ts"
+      ],
       "@angular-monorepo-pwa-template/customer-data-access": [
         "libs/customer-data-access/src/index.ts"
-      ],
-      "@angular-monorepo-pwa-template/customer-ui": [
-        "libs/customer-ui/src/index.ts"
       ],
       "@angular-monorepo-pwa-template/platform-feature": [
         "libs/platform-feature/src/index.ts"

@@ -33,9 +33,19 @@ export class SidenavComponent implements OnDestroy {
       icon: 'info',
     },
     {
-      route: RoutesEnum.CUSTOMERS,
-      label: 'Customers',
-      icon: 'person'
+      route: RoutesEnum.MEMBERS,
+      label: 'Members',
+      icon: 'group'
+    },
+    {
+      route: RoutesEnum.CALENDAR,
+      label: 'Calendar',
+      icon: 'calendar_month'
+    },
+    {
+      route: RoutesEnum.CHECKLIST,
+      label: 'Checklist',
+      icon: 'checklist'
     }
   ];
   private readonly router = inject(Router);

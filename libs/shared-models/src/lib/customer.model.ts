@@ -5,4 +5,5 @@ export type Customer = {
   name: string;
   gender: typeof GENDER[number];
   description: string;
+  checked?: boolean;
 }

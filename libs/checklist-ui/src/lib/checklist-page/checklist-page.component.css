@@ -1,0 +1,35 @@
+@property --header-height {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 56px;
+}
+
+:host {
+  width: 100%;
+}
+
+.checklists-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.customers-list {
+  width: 100%;
+}
+
+.list-item-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 0 15px;
+}
+
+.floating-button {
+  position: absolute;
+  top: 85%;
+  right: 5%;
+
+  @media (width <= 769px) {
+    right: 10%;
+  }
+}

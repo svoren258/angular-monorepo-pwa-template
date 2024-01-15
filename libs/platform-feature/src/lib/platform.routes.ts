@@ -7,24 +7,25 @@ const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
 export const PLATFORM_ROUTES: Routes = [
   {
     path: RoutesEnum.HOME,
-    loadComponent: () => import('@my-pwa/platform-ui').then(m => m.HomePageComponent),
-    ...canActivate(redirectUnauthorizedToLogin)
+    loadComponent: () =>
+      import('@my-pwa/platform-ui').then((m) => m.HomePageComponent),
+    ...canActivate(redirectUnauthorizedToLogin),
   },
   {
     path: RoutesEnum.ABOUT,
-    loadComponent: () => import('@my-pwa/about-ui').then(m => m.AboutUiComponent)
+    loadComponent: () =>
+      import('@my-pwa/about-ui').then((m) => m.AboutUiComponent),
   },
   {
-    path: RoutesEnum.CUSTOMER_DETAIL,
-    loadComponent: () => import('@angular-monorepo-pwa-template/customer-ui').then(m => m.CustomerDetailPageComponent)
-  },
-  {
-    path: RoutesEnum.CUSTOMERS,
-    loadComponent: () => import('@angular-monorepo-pwa-template/customer-ui').then(m => m.CustomersPageComponent)
+    path: RoutesEnum.CHECKLIST,
+    loadComponent: () =>
+      import('@angular-monorepo-pwa-template/checklist-ui').then(
+        (m) => m.ChecklistPageComponent
+      ),
   },
   {
     path: '',
     redirectTo: RoutesEnum.HOME,
-    pathMatch: 'full'
-  }
-]
+    pathMatch: 'full',
+  },
+];

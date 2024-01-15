@@ -4,5 +4,7 @@ export const enum RoutesEnum {
   LOGIN = 'login',
   ABOUT = 'about',
   CUSTOMER_DETAIL = 'customer_detail',
-  CUSTOMERS = 'customers'
+  CALENDAR = 'calendar',
+  CHECKLIST = 'checklist',
+  MEMBERS = 'members'
 }

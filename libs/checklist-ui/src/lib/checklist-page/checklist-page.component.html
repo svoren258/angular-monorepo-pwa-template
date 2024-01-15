@@ -1,0 +1,47 @@
+<div class="checklists-wrapper">
+  <my-pwa-template-accordion [title]="'Checklist 1'">
+    <mat-list
+      class="customers-list"
+      role="list"
+    >
+      @for (customer of customers();track customer) {
+        <div class="list-item-wrapper">
+          <div class="checkbox-wrapper">
+            <input
+              type="checkbox"
+              [checked]="customer.checked"
+              (change)="checkItem(customer)"
+            >
+          </div>
+          <mat-list-item
+            [ngStyle]="{
+      textDecoration: customer.checked ? 'line-through' : 'none'
+    }"
+            role="listitem"
+          >{{ customer.name }}
+          </mat-list-item>
+          <button
+            mat-icon-button
+            (click)="editCustomer(customer.id)"
+          >
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button
+            mat-icon-button
+            color="warn"
+            (click)="deleteCustomer(customer)"
+          >
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+        <mat-divider></mat-divider>
+      }
+    </mat-list>
+  </my-pwa-template-accordion>
+</div>
+
+<div class="floating-button">
+  <button mat-fab color="primary" aria-label="Example icon button with a delete icon" (click)="createChecklist()">
+    <mat-icon>add</mat-icon>
+  </button>
+</div>

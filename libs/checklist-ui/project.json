@@ -1,7 +1,7 @@
 {
-  "name": "customer-ui",
+  "name": "checklist-ui",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/customer-ui/src",
+  "sourceRoot": "libs/checklist-ui/src",
   "prefix": "angular-monorepo-pwa-template",
   "tags": [],
   "projectType": "library",
@@ -10,7 +10,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "libs/customer-ui/jest.config.ts"
+        "jestConfig": "libs/checklist-ui/jest.config.ts"
       }
     },
     "lint": {
@@ -18,8 +18,8 @@
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
-          "libs/customer-ui/**/*.ts",
-          "libs/customer-ui/**/*.html"
+          "libs/checklist-ui/**/*.ts",
+          "libs/checklist-ui/**/*.html"
         ]
       }
     }

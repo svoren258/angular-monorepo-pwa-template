@@ -1,9 +1,9 @@
 /* eslint-disable */
 export default {
-  displayName: 'customer-ui',
+  displayName: 'checklist-ui',
   preset: '../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
-  coverageDirectory: '../../coverage/libs/customer-ui',
+  coverageDirectory: '../../coverage/libs/checklist-ui',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [
       'jest-preset-angular',
