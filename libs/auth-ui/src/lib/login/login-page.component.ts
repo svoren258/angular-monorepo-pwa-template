@@ -4,7 +4,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 import { AuthService } from '@my-pwa/auth-data-access';
-import { CardComponent } from '@my-pwa/platform-ui';
+import { CardComponent } from '@my-pwa/shared-ui';
 
 const GOOGLE_ICON = `
     <svg
@@ -40,7 +40,6 @@ const GOOGLE_ICON = `
   imports: [
     MatButtonModule,
     MatIconModule,
-    CardComponent,
     CardComponent,
     MatCardModule
   ],

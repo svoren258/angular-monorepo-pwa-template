@@ -7,7 +7,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
 import { Router } from '@angular/router';
 import { CardFirestoreService } from '@my-pwa/platform-data-access';
-import { CardComponent } from '../card/card.component';
+import { CardComponent } from '@my-pwa/shared-ui';
 
 @Component({
   selector: 'my-pwa-template-home-ui',
