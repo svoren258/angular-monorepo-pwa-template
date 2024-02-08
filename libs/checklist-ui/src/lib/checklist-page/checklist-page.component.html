@@ -1,5 +1,5 @@
 <div class="checklists-wrapper">
-  <my-pwa-template-accordion [title]="'Checklist 1'">
+  <my-pwa-template-accordion [title]="'Checklist 1'" (titleChange)="onTitleChange($event)">
     <mat-list
       class="customers-list"
       role="list"

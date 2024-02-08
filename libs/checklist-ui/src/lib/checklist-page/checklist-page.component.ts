@@ -57,4 +57,8 @@ export class ChecklistPageComponent {
   createChecklist(): void {
     // TODO
   }
+
+  onTitleChange(event: any): void {
+    console.log(event)
+  }
 }

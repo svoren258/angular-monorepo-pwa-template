@@ -5,7 +5,23 @@
   >
     <mat-expansion-panel-header>
       <mat-panel-title>
-        {{ title }}
+        <input
+          #checklistTitleInput
+          type="text"
+          class="checklist-title-input"
+          matInput
+          [formControl]="titleFormControl"
+          (click)="stopEventPropagation($event)"
+        >
+        @if (inputIsFocused) {
+          <button
+            mat-icon-button
+            color="secondary"
+            (click)="onTitleChange($event)"
+          >
+            <mat-icon>check</mat-icon>
+          </button>
+        }
       </mat-panel-title>
     </mat-expansion-panel-header>
     <ng-content></ng-content>
