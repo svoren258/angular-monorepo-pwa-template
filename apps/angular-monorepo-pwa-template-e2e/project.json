@@ -15,12 +15,7 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": [
-          "apps/angular-monorepo-pwa-template-e2e/**/*.{js,ts}"
-        ]
-      }
+      "outputs": ["{options.outputFile}"]
     }
   },
   "implicitDependencies": ["angular-monorepo-pwa-template"]
